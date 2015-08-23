@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="section-title text-center">
+        <a href="#{{housePath}}">
+            <h3>{{houseName}}</h3>
+        </a>
+        <p>Nyheter</p>
+    </div>
+</div>
+<div class="row marginTop40 padding20 news">
+    <h4 class="alert alert-info">Ingen nyheter enda</h4>
+</div>
+
+{{#loggedIn}}
+    <div class="col-xs-12 marginTop40">
+        <a href="#house/{{houseId}}/add/news">
+            <div class="feature">
+                <i class="fa fa-pencil"></i>
+
+                <div class="feature-content">
+                    <p>Ny nyhet</p>
+                </div>
+            </div>
+        </a>
+    </div>
+{{/loggedIn}}
+
+

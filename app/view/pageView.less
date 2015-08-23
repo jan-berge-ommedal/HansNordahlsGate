@@ -1,0 +1,26 @@
+@import "../common";
+
+body {
+  padding-top: 30px;
+}
+
+.mainContainer {
+  padding-bottom: 160px;
+
+  h1, h2, h3, h4, p, div, label {
+    &:not(.alert) {
+      &:not(.black) {
+        color: white !important;
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+}

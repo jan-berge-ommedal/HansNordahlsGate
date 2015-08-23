@@ -1,0 +1,22 @@
+<div class="portfolio-item theHouse">
+    <img src="{{imageUrl}}">
+
+    <div class="portfolio-details text-center">
+        <h4>{{name}}</h4>
+        <a href="#house/{{id}}"><i class="fa fa-link"></i></a>
+    </div>
+    <div class="houseName">
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+    </div>
+
+</div>
+
+{{#loggedIn}}
+    <div class="margin20">
+        <button class="margin10 btn btn-danger fa fa-pencil editButton"></button>
+        <button class="margin10 btn btn-danger fa fa-trash deleteButton"></button>
+    </div>
+{{/loggedIn}}
+
+

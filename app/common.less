@@ -1,0 +1,62 @@
+@import "variables";
+
+.marginAndPadding(@n, @i: 5) when (@i =< @n) {
+  .margin@{i} {
+    margin: unit(@i, px);
+  }
+  .marginTop@{i} {
+    margin-top: unit(@i, px);
+  }
+  .marginRight@{i} {
+    margin-right: unit(@i, px);
+  }
+  .marginBottom@{i} {
+    margin-bottom: unit(@i, px);
+  }
+  .padding@{i} {
+    padding: unit(@i, px);
+  }
+  .paddingBottom@{i} {
+    padding-bottom: unit(@i, px);
+  }
+
+  .marginAndPadding(@n, (@i + 5));
+}
+
+.marginAndPadding(100);
+
+.floatLeft {
+  float: left;
+}
+
+.selectable {
+  cursor: pointer;
+  &:hover {
+    background-color: lighten(@color-main-brand, 5%);
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+
+.row-centered {
+  text-align: center;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
+}
+
+.has-error {
+  input {
+    background-color: #a94442;
+    color: white;
+  }
+}

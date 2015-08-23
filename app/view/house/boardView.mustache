@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="section-title text-center">
+        <a href="#{{housePath}}">
+            <h3>{{houseName}}</h3>
+        </a>
+        <p>Styret</p>
+    </div>
+</div>
+
+<div class="row marginTop40 members"></div>
+
+{{#loggedIn}}
+
+<div class="row marginTop80">
+    <div class="col-xs-12">
+        <a href="#house/{{houseId}}/add/boardMember">
+            <div class="feature">
+                <i class="fa fa-user"></i>
+                <div class="feature-content">
+                    <p>Nytt medlem</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+{{/loggedIn}}

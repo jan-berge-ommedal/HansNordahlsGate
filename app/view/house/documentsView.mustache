@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="section-title text-center">
+        <a href="#{{housePath}}">
+            <h3>{{houseName}}</h3>
+        </a>
+
+        <p>Dokumenter</p>
+    </div>
+</div>
+<div class="row documents"></div>
+
+
+{{#loggedIn}}
+    <div class="col-xs-12 marginTop30">
+        <a href="#house/{{houseId}}/add/document">
+            <div class="feature">
+                <i class="fa fa-file"></i>
+
+                <div class="feature-content">
+                    <p>Last opp nytt dokument</p>
+                </div>
+            </div>
+        </a>
+    </div>
+{{/loggedIn}}

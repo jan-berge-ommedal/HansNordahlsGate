@@ -1,0 +1,3 @@
+[submodule "Thin-PHP-Backend"]
+	path = php
+	url = git@github.com:jan-berge-ommedal/Thin-PHP-Backend.git

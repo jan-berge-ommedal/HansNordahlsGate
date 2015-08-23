@@ -1,0 +1,24 @@
+<div class="col-md-6">
+    <div class="latest-post">
+        {{#imageUrl}}
+            <img src="{{imageUrl}}" class="newsImage">
+        {{/imageUrl}}
+
+        <h4 class="black">{{name}}</h4>
+
+        <div class="post-details">
+            <ul>
+                <li><i class="fa fa-calendar"></i>{{timestampFormatted}}</li>
+            </ul>
+        </div>
+        <pre class="description">{{description}}</pre>
+
+    </div>
+
+    {{#loggedIn}}
+        <div class="margin20">
+            <button class="margin10 btn btn-danger fa fa-pencil editButton"></button>
+            <button class="margin10 btn btn-danger fa fa-trash deleteButton"></button>
+        </div>
+    {{/loggedIn}}
+</div>

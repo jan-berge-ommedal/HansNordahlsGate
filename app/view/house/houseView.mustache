@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="section-title text-center">
+        <h3>{{houseName}}</h3>
+    </div>
+</div>
+
+<div class="row marginTop40">
+
+    <div class="col-md-3 leftItems">
+
+        <div class="menu-item blue responsive-2">
+            <a href="#house/{{houseId}}/news">
+                <i class="fa fa-newspaper-o"></i>
+                <p>Nyheter</p>
+            </a>
+        </div>
+
+        <div class="menu-item color responsive">
+            <a href="#house/{{houseId}}/documents">
+                <i class="fa fa-files-o"></i>
+                <p>Dokumenter</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="home-slider">
+            <div id="carousel-example-generic" class="carousel slide paddingBottom30" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    {{#houseImages}}
+                        <li data-target="#carousel-example-generic" data-slide-to="{{index}}"
+                            {{#active}}class="active"{{/active}}></li>
+                    {{/houseImages}}
+                </ol>
+
+                <div class="carousel-inner">
+                    {{#houseImages}}
+                        <div class="item{{#active}} active{{/active}}">
+                            <img src="{{url}}" class="img-responsive" alt="">
+
+                            {{#loggedIn}}
+                                <button class="marginTop20 marginBottom50 btn btn-danger fa fa-trash deleteHouseImage"
+                                        data-id="{{id}}"></button>
+                            {{/loggedIn}}
+                        </div>
+                    {{/houseImages}}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3 rightItems">
+
+        <div class="menu-item light-orange responsive">
+            <a href="#house/{{houseId}}/board">
+                <i class="fa fa-users"></i>
+
+                <p>Styret</p>
+            </a>
+        </div>
+
+        <div class="menu-item red responsive">
+            <a href="#house/{{houseId}}/contactForm">
+                <i class="fa fa-envelope-o"></i>
+
+                <p>Kontakskjema</p>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{{#loggedIn}}
+
+    <div class="row marginTop80 newItems">
+
+
+        <div class="col-xs-12">
+            <a href="#house/{{houseId}}/add/image">
+                <div class="feature">
+                    <i class="fa fa-photo"></i>
+
+                    <div class="feature-content">
+                        <p>Last opp nytt bilde</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+{{/loggedIn}}

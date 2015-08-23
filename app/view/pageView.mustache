@@ -1,0 +1,18 @@
+<div class="mainbody-section text-center container">
+    <div class="mainContainer"></div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">Forsiden</a>
+                <span class="margin10">|</span>
+                <span>
+                    {{^isLoggedIn}}<a href="#login">Logg inn</a>{{/isLoggedIn}}
+                    {{#isLoggedIn}}<a href="/php/logout.php">Logg ut</a>{{/isLoggedIn}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

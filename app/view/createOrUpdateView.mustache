@@ -1,0 +1,85 @@
+<form class="form-horizontal uploadForm">
+
+    <div class="form-group">
+        <label for="fileInput" class="col-sm-2">{{#fileIsImage}}Bilde{{/fileIsImage}}{{^fileIsImage}}Fil{{/fileIsImage}}</label>
+
+        <div class="col-sm-10">
+
+            <div class="fileGroup">
+                <input id="fileInput" name="file" class="form-control fileInput" type="file" {{#fileIsImage}}accept="image/x-png, image/jpeg"{{/fileIsImage}} />
+            </div>
+
+            <div class="currentFile">
+                <div class="marginBottom10">
+                    {{#fileIsImage}}
+                        <img src="{{imageUrl}}" class="img img-thumbnail" style="max-height: 200px" />
+                    {{/fileIsImage}}
+                    {{^fileIsImage}}
+                        <a href="{{imageUrl}}">vis</a>
+                    {{/fileIsImage}}
+                </div>
+                <div>
+                    <button class="btn btn-default uploadNewImageButton">
+                        <i class="fa fa-upload marginRight10"></i>
+                        <span>Last opp {{#fileIsImage}}nytt bilde{{/fileIsImage}}{{^fileIsImage}}ny fil{{/fileIsImage}}</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tooLargeFile alert alert-danger">
+        Filen er for stor
+    </div>
+    {{#additionalInfo}}
+    <div class="form-group">
+        <label for="nameInput" class="col-sm-2">Navn</label>
+
+        <div class="col-sm-10">
+            <input id="nameInput" class="form-control nameInput" type="text" required="required" value="{{name}}"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="descriptionInput" class="col-sm-2">Beskrivelse</label>
+
+        <div class="col-sm-10">
+            {{#largeDescription}}
+                <textarea id="descriptionInput" class="form-control descriptionInput" rows="15">{{description}}</textarea>
+            {{/largeDescription}}
+            {{^largeDescription}}
+                <input id="descriptionInput" type="text" class="form-control descriptionInput" value="{{description}}"/>
+            {{/largeDescription}}
+        </div>
+    </div>
+    {{#withIcon}}
+    <div class="form-group">
+        <label for="iconSelect" class="col-sm-2">Ikon</label>
+
+        <div class="col-sm-10">
+            {{#iconOptions}}
+                <label class="floatLeft selectable">
+                    <input class="fontAwesomeRadio icon-{{.}}" type="radio" name="fontAwesome" value="{{.}}">
+                    <i class="fa fa-3x fa-{{.}} padding5"></i>
+                </label>
+            {{/iconOptions}}
+        </div>
+    </div>
+    {{/withIcon}}
+    {{/additionalInfo}}
+    <div class="form-group marginTop60">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+            <button type="button" class="btn btn-lg btn-default backButton pull-left">
+                <i class="fa fa-arrow-circle-left marginRight10"></i><span>Tilbake</span>
+            </button>
+        </div>
+        <div class="col-sm-5">
+            <button type="submit" class="btn btn-lg btn-default pull-right">
+                <i class="fa fa-check marginRight10"></i><span>Lagre</span>
+            </button>
+        </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar theProgressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</form>

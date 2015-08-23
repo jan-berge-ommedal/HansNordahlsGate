@@ -1,0 +1,20 @@
+<div class="team-member">
+    <img src="{{imageUrl}}" class="img-responsive" alt="">
+
+    <div class="team-details">
+        <h4>{{name}}</h4>
+
+        <div class="designation">{{description}}</div>
+    </div>
+</div>
+<div>
+    <h4>{{name}}</h4>
+
+    <div>{{description}}</div>
+</div>
+{{#loggedIn}}
+    <div class="margin20">
+        <button class="margin10 btn btn-danger fa fa-pencil editButton"></button>
+        <button class="margin10 btn btn-danger fa fa-trash deleteButton"></button>
+    </div>
+{{/loggedIn}}
